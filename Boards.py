@@ -1,5 +1,6 @@
 import numpy as np
 
+# ADDDED STUFF
 
 # constants
 global c
@@ -21,21 +22,23 @@ class Matrix:
         self.previous = np.zeros([self.y_size, self.x_size])
         self.time = 0
         self.half = half
-        if self.half:
-            self.time = 0.5
+        # TODO
+        ## add delta T delta X
 
-    def place(self, x, y, magnitude):
+    def place(self, row, col, magnitude):
         """
         Args:
             x: x coordinate in plane
             y: y coordinate in plane
             magnitude: magnitude of the excitation
         """
-        if x < 0 or x > self.x_size - 1:
-            raise ("hello")
-        if y < 0 or y > self.y_size - 1:
+
+        # if out of range
+        if row < 0 or row > self.x_size - 1:
             raise Exception
-        self.current[y][x] = magnitude
+        if col < 0 or col > self.y_size - 1:
+            raise Exception
+        self.current[row][col] = magnitude
 
     def currentCopy(self):
         """
@@ -43,12 +46,15 @@ class Matrix:
         Returns: deep copy of the current array to prevent assigning by reference
 
         """
+
+        # make into np array
         new = []
         for i in self.current:
             new.append(i)
         return new
 
     def increment(self):
+        # increment by delta T
         self.time += 1
 
     def getCurrent(self, i, j):
@@ -69,11 +75,12 @@ class Matrix:
 
 class Solver:
 
-    def __init__(self, mesh, time):
-        self.ex = Matrix((mesh, mesh))
-        self.ey = Matrix((mesh, mesh))
-        self.h = Matrix((mesh, mesh))
-        self.mesh = mesh
+    def __init__(self, size, time, deltaT, deltaX):
+        self.ex = Matrix((size, size))
+        self.ey = Matrix((size, size))
+        self.h = Matrix((size, size))
+        self.deltaT = deltaT
+        self.deltaX = deltaX
         self.endTime = time
         self.time = 0
         self.const = 1
@@ -82,23 +89,22 @@ class Solver:
         """
         Applies all 3 update equations on H, Ex and Ey in order
         """
-        temp_h = self.h.currentCopy()
-        temp_x = self.ex.currentCopy()
-        temp_y = self.ey.currentCopy()
+        # temp_h = self.h.currentCopy()
+        # temp_x = self.ex.currentCopy()
+        # temp_y = self.ey.currentCopy()
+
+        self.h.previous = self.h.currentCopy()
+        self.ex.previous = self.ex.currentCopy()
+        self.ey.previous = self.ey.currentCopy()
 
         for i in range(self.h.y_size):
             for j in range(self.h.x_size):
                 self.update_h(i, j)
 
-        self.h.previous = temp_h
-
         for i in range(self.mesh):
             for j in range(self.mesh):
                 self.update_x(i, j)
                 self.update_y(i, j)
-
-        self.ex.previous = temp_x
-        self.ey.previous = temp_y
 
         self.time += 1
 
