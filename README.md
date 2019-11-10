@@ -2,10 +2,10 @@
 ==============
 
 ### EM Solver in 2D, in testing...
-Requires numpy
+Requires numpy, matplotlib
 
 
-### _Change Log_
+### Change Log
 
 
 * 30/10/2019 added stuff
@@ -13,7 +13,6 @@ Requires numpy
 ### TODO
 
 * Add epsilon and mu matrices
-* Add mesh ∆x and ∆t
 * Change matrix algebra method
 
 ### Questions

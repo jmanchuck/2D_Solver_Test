@@ -2,10 +2,113 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d509d9ea-d3ea-4a47-aa34-093da48239c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/non_user_solver.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Boards.py" beforeDir="false" afterPath="$PROJECT_DIR$/Boards.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/001.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/002.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/003.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/004.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/005.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/006.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/007.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/008.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/009.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/010.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/011.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/012.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/013.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/014.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/015.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/016.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/017.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/018.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/019.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/020.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/021.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/022.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/023.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/024.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/025.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/026.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/027.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/028.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/029.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/030.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/031.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/032.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/033.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/034.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/035.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/036.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/037.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/038.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/039.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/040.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/041.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/042.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/043.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/044.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/045.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/046.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/047.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/048.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/049.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/050.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/051.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/052.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/053.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/054.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/055.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/056.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/057.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/058.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/059.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/060.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/061.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/062.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/063.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/064.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/065.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/066.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/067.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/068.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/069.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/070.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/071.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/072.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/073.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/074.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/075.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/076.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/077.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/078.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/079.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/080.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/081.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/082.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/083.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/084.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/085.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/086.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/087.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/088.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/089.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/090.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/091.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/092.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/093.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/094.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/095.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/096.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/097.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/098.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/099.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Figs/100.0.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h_5.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h_8.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie.gif" beforeDir="false" afterPath="$PROJECT_DIR$/movie.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/non_user_solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/non_user_solver.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +151,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Boards">
+  <component name="RunManager" selected="Python.non_user_solver">
     <configuration name="Boards" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="2D_Solver_Test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -112,11 +215,33 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="scratch_1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="2D_Solver_Test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Boards" />
         <item itemvalue="Python.non_user_solver" />
         <item itemvalue="Python.scratch" />
+        <item itemvalue="Python.Boards" />
+        <item itemvalue="Python.scratch_1" />
       </list>
     </recent_temporary>
   </component>
