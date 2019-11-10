@@ -35,23 +35,29 @@ while time < end_time:
     ey_prev = np.copy(ey)
 
     # update h
-    h = h_prev + (dt / (dx * mu)) * (ex[1:] - ex[:-1] - ey[:, 1:] + ey[1:, :-1])
+    h = h_prev + (dt / (dx * mu)) * ((ex[1:] - ex[:-1]) - (ey[:, 1:] + ey[:, :-1]))
 
     # override h bottom left with Gaussian
     if pulseStart < time < pulseEnd:
         h[2][2] = (1 / (sigma * math.sqrt(2 * math.pi))) * (math.exp(-((time - pulseMid) ** 2) / (2 * (sigma ** 2))))
 
-    ex[1:-1, :] = ex_prev[1:-1, :] + (dt / (dx * epsilon)) * (h[:-1] - h[1:])
-    ey[:, 1:-1] = ey_prev[:, 1:-1] - (dt / (dx * epsilon)) * (h[:, :-1] - h[:, 1:])
+    ex[1:-1, :] = ex_prev[1:-1, :] + (dt / (dx * epsilon)) * (h[1:] - h[:-1])
+    ey[:, 1:-1] = ey_prev[:, 1:-1] - (dt / (dx * epsilon)) * (h[:, 1:] - h[:, :-1])
+
+    ex[0] = ex_prev[0] + (dt / (dx * epsilon)) * (h[0])
+    ex[-1] = ex_prev[-1] + (dt / (dx * epsilon)) * (-h[-1])
+
+    ey[:, 0] = ey_prev[:, 0] + (dt / (dx * epsilon)) * (h[:, 0])
+    ey[:, -1] = ey_prev[:, -1] + (dt / (dx * epsilon)) * (-h[:, -1])
 
     time += dt
     step += 1
     print(step)
 
-    # dfx = pd.DataFrame(ex)
-    # print(dfx)
-    df = pd.DataFrame(h)
-    print(df)
+    dfx = pd.DataFrame(ex)
+    print(dfx)
+    # df = pd.DataFrame(h)
+    # print(df)
 
     # plt.pcolormesh(h)
     # plt.pause(0.001)
