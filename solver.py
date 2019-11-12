@@ -10,6 +10,8 @@ c = 2.99 * (10 ** 8)
 mu = 1.26 * (10 ** (-6))
 epsilon = 8.85 * (10 ** (-12))
 
+h_np_arrs = []
+
 # ALL USER INPUTS HERE
 sigma_w = 1
 sigma_t = 1 / sigma_w
@@ -19,6 +21,7 @@ s = 10
 stability = 0.2
 
 # improvements:
+# - take into account epsilon max to determine how we will sample a wavelength (to get dx or ds)
 # - user inputs real time simulation length in seconds, use dt to calculate how many steps
 
 
@@ -64,14 +67,19 @@ fig, ax = plt.subplots()
 # mesh = plt.pcolormesh(h)
 
 # material properties
-eps_arr = np.ones((size, size)) * epsilon
-mu_arr = np.ones((size, size)) * epsilon
+eps_arr = (dt / ds) * (np.ones((size, size)) / epsilon)
+mu_arr = (dt / ds) * (np.ones((size, size)) / mu)
+epsilon_relative = 10
 
-# reflecting box in the middle
-row_upper = size // 3
-row_lower = 2 * (size // 3)
-col_upper = size // 3
-col_lower = 2 * (size // 3)
+# adding square material in top right
+eps_arr[:(size // 3), 2 * (size // 3):] *= epsilon_relative
+# mu_arr[:(size // 3), 2 * (size // 3):] *= 1
+
+# reflecting box in the bottom left
+row_upper = 2 * (size // 3)
+row_lower = size - 1
+col_upper = 0
+col_lower = (size // 3)
 
 def update(time):
 
@@ -82,22 +90,24 @@ def update(time):
     ey_prev = ey
 
     # update h
-    h = h_prev + constant_mu * ((ex_prev[1:] - ex_prev[:-1]) - (ey_prev[:, 1:] - ey_prev[:, :-1]))
+    h = h_prev + mu_arr * ((ex_prev[1:] - ex_prev[:-1]) - (ey_prev[:, 1:] - ey_prev[:, :-1]))
 
     # override h bottom left with Gaussian
-    if 0 < time < pulseMid * 3:
+    if 0 < time < pulseMid * 4:
         magnitude = (-time + pulseMid) * (1 / (sigma_t * math.sqrt(2 * math.pi))) * (
             math.exp(-((time - pulseMid) ** 2) / (2 * (sigma_t ** 2))))
-        h[1][1] = magnitude
-        h[-2][-2] = magnitude
+        h[size//2][size//2] = magnitude
+        # h[-2][-2] = magnitude
 
     h[row_upper:row_lower, col_upper:col_lower] = 0
-    ex[1:-1, :] = ex_prev[1:-1, :] + constant_eps * (h[1:, :] - h[:-1, :])
-    ey[:, 1:-1] = ey_prev[:, 1:-1] - constant_eps * (h[:, 1:] - h[:, :-1])
+    ex[1:-1, :] = ex_prev[1:-1, :] + eps_arr[1:, :] * (h[1:, :] - h[:-1, :])
+    ey[:, 1:-1] = ey_prev[:, 1:-1] - eps_arr[:, 1:] * (h[:, 1:] - h[:, :-1])
 
     ex[row_upper:row_lower, col_upper:col_lower] = 0
     ey[row_upper:row_lower, col_upper:col_lower] = 0
     step += 1
+
+    h_np_arrs.append(h)
 
     return h
 
@@ -113,12 +123,20 @@ fig.colorbar(im)
 def animate(time):
     if step % 10 == 0:
         ax.set_title("Time Step = {}".format(step))
-    start = process_time()
+        # plt.savefig(str(step) + '.png')
+
+    # if step % 100 == 0:
+    #     print('.', end=' ')
     im.set_array(update(time))
     return im,
 
 
 anim = animation.FuncAnimation(fig, animate, frames=np.arange(0, end_time, dt), interval=1, blit=False, repeat=False)
 # anim.save(filename="movie.gif", fps=20)
+
+# Set up formatting for the movie files
+# Writer = animation.writers['pillow']
+# writer = Writer(metadata=dict(artist='Me'), bitrate=1800)
+# anim.save('movie.gif', writer=writer)
 plt.show()
 exit()
